@@ -7,6 +7,8 @@
 *.userosscache
 *.sln.docstates
 
+# API KEY
+src/environments/environment.ts
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
