@@ -6,12 +6,12 @@
     "goals-app": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
+      "root": "./",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/",
             "index": "src/index.html",
@@ -58,7 +58,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "goals-app:build:production"
