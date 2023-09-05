@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { MatCardModule } from '@angular/material/card';
 import { GoalModule } from './goal/goal.module';
 import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { AuthService } from './auth.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -36,10 +38,16 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     MatIconModule,
     MatCardModule,
     GoalModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
 
   ],
   providers: [
-    ScreenTrackingService, UserTrackingService,
+    ScreenTrackingService, UserTrackingService, AuthService,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase }
 
   ],
