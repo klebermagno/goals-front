@@ -1,0 +1,27 @@
+<div class="content-wrapper">
+    <button (click)="newTask()" mat-button>
+        <mat-icon>add</mat-icon> Add Task
+    </button>
+
+    <div class="container-wrapper">
+        <div class="container">
+            ...
+        </div>
+    </div>
+</div>
+<mat-expansion-panel *ngFor="let task of tasks$ | async">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{ task.title }}
+        </mat-panel-title>
+        <mat-panel-description>
+            {{ task.description }}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-card class="item" *ngIf="task" (dblclick)="edit.emit(task)">
+        <h2>{{ task.title }}</h2>
+        <p>
+            {{ task.description }}
+        </p>
+    </mat-card>
+</mat-expansion-panel>
