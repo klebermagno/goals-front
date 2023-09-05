@@ -28,10 +28,6 @@ jobs:
       contents: write
     needs: sanity-checks
     runs-on: ubuntu-latest
-    if: >
-      github.ref == 'refs/heads/master'
-      && !contains(toJSON(github.event.commits.*.message), '[skip-ci]')
-      && !contains(toJSON(github.event.commits.*.message), 'chore(deps-dev)')
     env:
       DOCKER_REGISTRY_URL: registry.hub.docker.com
     steps:

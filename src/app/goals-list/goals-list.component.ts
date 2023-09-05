@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { TaskDialogComponent, TaskDialogResult } from '../task-dialog/task-dialog.component';
 import { TaskService } from '../task.service';
 import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-goals-list',
   templateUrl: './goals-list.component.html',
