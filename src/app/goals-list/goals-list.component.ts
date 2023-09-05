@@ -1,9 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Goal } from '../model/goal.model';
 import { Task } from '../model/task.model';
-import { GoalService } from '../goal.service';
 import { MatDialog } from '@angular/material/dialog';
-import { TaskDialogComponent, TaskDialogData, TaskDialogResult } from '../task-dialog/task-dialog.component';
+import { TaskDialogComponent, TaskDialogResult } from '../task-dialog/task-dialog.component';
 import { TaskService } from '../task.service';
 import { Observable } from 'rxjs';
 @Component({
@@ -37,7 +35,6 @@ export class GoalsListComponent {
         if (!result) {
           return;
         }
-        // this.tasks$.push(result.task);
       });
   }
   editTask(task: Task): void {

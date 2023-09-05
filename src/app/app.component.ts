@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Task } from './model/task.model';
-import { Goal } from './model/goal.model';
 import { AuthService } from './auth.service';
 
 @Component({

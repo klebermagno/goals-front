@@ -14,7 +14,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { GoalModule } from './goal/goal.module';
-import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AuthService } from './auth.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -22,7 +21,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
   declarations: [
     AppComponent,
-    //TaskDialogComponent
   ],
   imports: [
     BrowserModule,

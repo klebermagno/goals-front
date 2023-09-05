@@ -20,9 +20,6 @@ export class GoalService {
   // firestore: Firestore = inject(Firestore);
   angularFirestore: AngularFirestore = inject(AngularFirestore);
 
-  constructor() { }
-
-
   getGoals(): Observable<Goal[]> {
     return this.angularFirestore.collection<Goal>("goal").valueChanges();
   }
