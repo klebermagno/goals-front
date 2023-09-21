@@ -1,7 +1,6 @@
 {
   "hosting": [
     {
-      "site": "itacorubi",
       "public": "dist",
       "rewrites": [
         {
