@@ -6,7 +6,7 @@ import { TaskService } from '../task.service';
 @Component({
   selector: 'app-task-dialog',
   templateUrl: './task-dialog.component.html',
-  styleUrls: ['./task-dialog.component.css']
+  styleUrls: ['./task-dialog.component.scss']
 })
 export class TaskDialogComponent {
   private backupTask: Partial<Task> = { ...this.data.task };
