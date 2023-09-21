@@ -12,6 +12,7 @@
     },
     {
       "target": "goals-app",
+      "public": "dist",
       "source": ".",
       "frameworksBackend": {}
     }

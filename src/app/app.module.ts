@@ -1,6 +1,11 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ProfileComponent } from './components/profile/profile.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -15,18 +20,36 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { GoalModule } from './goal/goal.module';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-import { AuthService } from './auth.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AuthService } from './services/auth.service';
+
+import { MatMenuModule } from '@angular/material/menu';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    SignUpComponent,
+    LandingComponent,
+    HomeComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    MatMenuModule,
+    HotToastModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAnalytics(() => getAnalytics()),

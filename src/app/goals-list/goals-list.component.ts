@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-goals-list',
   templateUrl: './goals-list.component.html',
-  styleUrls: ['./goals-list.component.css']
+  styleUrls: ['./goals-list.component.scss']
 })
 export class GoalsListComponent {
   tasks$: Observable<Task[]> = this.taskService.getTasks();
