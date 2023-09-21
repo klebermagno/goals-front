@@ -8,11 +8,11 @@
           "source": "**",
           "destination": "/index.html"
         }
-      ]
+      ],
+      "target": "goals-app"
     },
     {
       "target": "goals-app",
-      "public": "dist",
       "source": ".",
       "frameworksBackend": {}
     }
