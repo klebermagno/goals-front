@@ -46,7 +46,6 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    HotToastModule,
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
@@ -57,6 +56,7 @@ import { MatButtonModule } from '@angular/material/button';
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
     provideStorage(() => getStorage()),
+    HotToastModule.forRoot(),
     //Material design
     MatToolbarModule,
     MatIconModule,
