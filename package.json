@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "replace 'FIREBASE_API_KEY_PLACEHOLDER' $FIREBASE_API_KEY src/environments/environment.ts && ng serve",
+    "build": "replace 'FIREBASE_API_KEY_PLACEHOLDER' $FIREBASE_API_KEY src/environments/environment.ts && ng build && replace $FIREBASE_API_KEY 'FIREBASE_API_KEY_PLACEHOLDER' src/environments/environment.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
